@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web component</title>
+</head>
+<body>
+    <popin-component id="popin" modal="true">
+        <div slot="content">
+            <span>Un text</span>
+            <a href="#lien">Un lien</a>
+        </div>
+    </popin-component>
+
+    <button onclick="show()">Affiche popin</button>
+    <script type="text/javascript">
+        function show(){
+            document.getElementById('popin').show();
+
+            setTimeout(() => {hide()}, 5000);
+        }
+
+        function hide(){
+            document.getElementById('popin').visible = false;
+        }
+    </script>
+    <script type="application/javascript" src="popin/popin.js"></script>
+</body>
+</html>
